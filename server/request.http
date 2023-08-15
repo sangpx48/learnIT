@@ -1,0 +1,57 @@
+
+//POST User Register
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "besann",
+  "password": "besann"
+}
+
+###
+//POST User Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "sangpx",
+  "password": "sangpx"
+} 
+
+###
+//POST Post
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE0YWMwNjQ3ODU5M2E2MWRkNDE4NjciLCJpYXQiOjE2Nzk1NTg2MjB9.OkWC2gNCrAePa0W7DwSGWC9XCK2npIW25vrrt_JTFCA
+
+{
+  "title": "Java Course",
+  "description": "Java Basic",
+  "url": "google.com",
+  "status": "TO LEARN"
+} 
+
+
+###
+//GET POST
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE0YWMwNjQ3ODU5M2E2MWRkNDE4NjciLCJpYXQiOjE2Nzk1NTg2MjB9.OkWC2gNCrAePa0W7DwSGWC9XCK2npIW25vrrt_JTFCA
+
+### 
+//UPDATE POST
+PUT http://localhost:5000/api/posts/6465103040a6b5126dd833ec
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE0YWMwNjQ3ODU5M2E2MWRkNDE4NjciLCJpYXQiOjE2Nzk1NTg2MjB9.OkWC2gNCrAePa0W7DwSGWC9XCK2npIW25vrrt_JTFCA
+
+{
+  "title": "Leaned HTML/CSS and Javascript",
+  "desciption": "HTML-CSS course",
+  "url": "youtube.com",
+  "status": "LEARNED"
+}
+
+
+###
+//DELETE POST
+DELETE http://localhost:5000/api/posts/64784fadb03ea861abb79eb0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE0YWMwNjQ3ODU5M2E2MWRkNDE4NjciLCJpYXQiOjE2Nzk1NTg2MjB9.OkWC2gNCrAePa0W7DwSGWC9XCK2npIW25vrrt_JTFCA
